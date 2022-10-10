@@ -41,7 +41,7 @@ cd "${IAC_FOLDER}"
 
 arch_name=$(uname -m)
 rm -rf riscv-gnu-toolchain.tar.gz
-curl --output riscv-gnu-toolchain.tar.gz -L "https://github.com/EIE2-IAC-Labs/Lab0-devtools/releases/download/v1.0.0-rc.1/riscv-gnu-toolchain-2022-09-21-Darwin-${arch_name}.tar.gz"
+curl --output riscv-gnu-toolchain.tar.gz -L "https://github.com/EIE2-IAC-Labs/Lab0-devtools/releases/download/v1.0.0/riscv-gnu-toolchain-2022-09-21-Darwin-${arch_name}.tar.gz"
 sudo rm -rf /opt/riscv
 sudo tar -xzf riscv-gnu-toolchain.tar.gz --directory /opt
 export PATH="/opt/riscv/bin:$PATH"
