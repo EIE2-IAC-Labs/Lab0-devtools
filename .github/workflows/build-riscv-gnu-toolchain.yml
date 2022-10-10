@@ -1,0 +1,56 @@
+name: Build RISC-V GNU Toolchain
+
+on: workflow_dispatch
+
+jobs:
+  ubuntu:
+    strategy:
+      matrix:
+        runner: [ubuntu-22.04, ubuntu-20.04]
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - name: Install deps
+        run: |
+          sudo apt-get install -y autoconf automake autotools-dev curl python3 libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc zlib1g-dev libexpat-dev
+
+      - name: Build riscv-gnu-toolchain
+        run: |
+          git clone https://github.com/riscv/riscv-gnu-toolchain riscv-gnu-toolchain
+          mkdir riscv
+          cd riscv-gnu-toolchain
+          git checkout 2022.09.21
+          ./configure --prefix="$(dirname $(pwd))/riscv" --with-multilib-generator="rv32i-ilp32--;rv32iac-ilp32--;rv32im-ilp32--;rv32imc-ilp32--;rv32imf-ilp32--;rv32imf-ilp32f--;rv32imac-ilp32--;rv32imafc-ilp32f--;rv64imac-lp64--;rv64imafdc-lp64d--"
+          make
+          cd ..
+          tar -czf riscv-gnu-toolchain-${{ matrix.runner }}.tar.gz riscv
+
+      - name: Upload toolchain artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: riscv-gnu-toolchain-${{ matrix.runner }}.tar.gz
+          path: riscv-gnu-toolchain-${{ matrix.runner }}.tar.gz
+  mac_os:
+    runs-on: macos-12
+    steps:
+      - name: Install deps
+        run: |
+          brew install python3 gawk gnu-sed gmp mpfr libmpc isl zlib expat
+          brew tap discoteq/discoteq
+          brew install flock
+
+      - name: Build riscv-gnu-toolchain
+        run: |
+          git clone https://github.com/riscv/riscv-gnu-toolchain riscv-gnu-toolchain
+          mkdir riscv
+          cd riscv-gnu-toolchain
+          git checkout 2022.09.21
+          ./configure --prefix="$(dirname $(pwd))/riscv" --with-multilib-generator="rv32i-ilp32--;rv32iac-ilp32--;rv32im-ilp32--;rv32imc-ilp32--;rv32imf-ilp32--;rv32imf-ilp32f--;rv32imac-ilp32--;rv32imafc-ilp32f--;rv64imac-lp64--;rv64imafdc-lp64d--"
+          make
+          cd ..
+          tar -czf riscv-gnu-toolchain-apple-x86.tar.gz riscv
+
+      - name: Upload toolchain artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: riscv-gnu-toolchain-apple-x86.tar.gz
+          path: riscv-gnu-toolchain-apple-x86.tar.gz

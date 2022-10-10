@@ -1,0 +1,46 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "Build testbench",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-faligned-new",
+                "-fcf-protection=none",
+                "-Wno-bool-operation",
+                "-Wno-tautological-bitwise-compare",
+                "-Wno-parentheses-equality",
+                "-Wno-sign-compare",
+                "-Wno-uninitialized",
+                "-Wno-unused-but-set-variable",
+                "-Wno-unused-parameter",
+                "-Wno-unused-variable",
+                "-Wno-shadow",
+                "-std=gnu++14",
+                "-g",
+                "-I",
+                "${workspaceFolder}/obj_dir",
+                "-I",
+                "/usr/local/share/verilator/include",
+                "/usr/local/share/verilator/include/verilated.cpp",
+                "/usr/local/share/verilator/include/verilated_vcd_c.cpp",
+                "${workspaceFolder}/obj_dir/Vmod_test__ALL.cpp",
+                "${workspaceFolder}/test/tb_verilator.cpp",
+                "-o",
+                "${workspaceFolder}/obj_dir/tb_verilator"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ],
+    "version": "2.0.0"
+}

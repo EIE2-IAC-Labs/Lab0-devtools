@@ -1,0 +1,26 @@
+{
+    "folders": [
+        {
+            "path": "toolchain"
+        },
+        {
+            "path": "cpu"
+        },
+        {
+            "path": "labs"
+        }
+    ],
+    "settings": {
+        "editor.formatOnSave": true,
+        "systemverilog.launchConfigurationVerilator": "verilator -sv --lint-only --language 1800-2017 --Wall -Irtl"
+    },
+    "extensions": {
+        "recommendations": [
+            "ms-vscode.cpptools-extension-pack",
+            "eirikpre.systemverilog",
+            "eamodio.gitlens",
+            "ms-vsliveshare.vsliveshare",
+            "ms-vscode.makefile-tools"
+        ]
+    }
+}
