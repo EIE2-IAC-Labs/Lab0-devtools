@@ -12,7 +12,7 @@ At the end of the lab you will have installed the following tools:
 - [gtkwave](http://gtkwave.sourceforge.net/) which allows you to view waveforms of your design which were produced by Verilator
 - A folder located at [~/Documents/iac](~/Documents/iac) which contains this repository, along with a VS Code workspace used to test that your toolchain has installed correctly
 
-## Installlation
+## Installation
 
 ### Windows 10 and 11
 
@@ -71,4 +71,4 @@ Messages starting with `[iac]` are frequently
 logged to the terminal, showing you what the script is doing.
 
 By looking at the scripts in the [./tools](tools) directory, you should be able
-to find the relevant section based on the last log message outputted.
+to find the relevant section based on the last outputted log message.
