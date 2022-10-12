@@ -1,3 +1,5 @@
+export PATH := /opt/riscv/bin:$(PATH)
+
 # Defines that these are Makefile rules and not file names to build.
 .PHONY: default clean build test 
 
