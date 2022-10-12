@@ -12,7 +12,10 @@
     ],
     "settings": {
         "editor.formatOnSave": true,
-        "systemverilog.launchConfigurationVerilator": "verilator -sv --lint-only --language 1800-2017 --Wall -Irtl"
+        "systemverilog.launchConfigurationVerilator": "verilator -sv --lint-only --language 1800-2017 --Wall -Irtl",
+        "systemverilog.compileOnOpen": true,
+        "systemverilog.compileOnSave": true,
+        "systemverilog.enableIncrementalIndexing": false
     },
     "extensions": {
         "recommendations": [
