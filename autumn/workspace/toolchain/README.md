@@ -5,7 +5,7 @@
 To see if you can run all of the required tools correctly, open up a terminal to this folder and run the following:
 
 ```bash
-iac@host:~/Documents/iac/devtools/autumn/workspace/toolchain$ make tb_verilator
+iac@host:~/Documents/iac/lab0-devtools/autumn/workspace/toolchain$ make tb_verilator
 ==== Building Verilator test =====
 position        tick    value_i value_o
 (during tick)   1       42      0
@@ -21,7 +21,7 @@ Testbench exiting after reaching MAX_TICKS
 ```
 
 ```bash
-iac@host:~/Documents/iac/devtools/autumn/workspace/toolchain$ make tb_toolchain
+iac@host:~/Documents/iac/lab0-devtools/autumn/workspace/toolchain$ make tb_toolchain
 ==== Building Toolchain test =====
 obj_dir/tb_toolchain: ELF 32-bit LSB executable, UCB RISC-V, single-float ABI, version 1 (SYSV), statically linked, not stripped
 ```
