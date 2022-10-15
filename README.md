@@ -33,7 +33,7 @@ At the end of the lab you will have installed the following tools:
     You may have to enter your password a few times while everything installs.
 
     Depending on your Internet connection, this may take up to 15 minutes.
-9) VS Code should automatically open after the previous step. If not, open the *workspace* at `~/iac/Lab0-devtools/autumn/workspace/iac-autumn.code-workspace`; to do this open VS Code, and select "File->Open Workspace from File...", then navigate to the workspace file.
+9) VS Code should automatically open after the previous step. If not, open the *workspace* at `~/iac/lab0-devtools/autumn/workspace/iac-autumn.code-workspace`. To do this, open an Ubuntu 22.04 terminal and type `code`; doing this opens a [VS Code instance inside Ubuntu](https://code.visualstudio.com/docs/remote/wsl#_getting-started) rather than Windows. When VS Code opens, select "File->Open Workspace from File...", then navigate to the workspace file.
 10) Follow the instructions in the [toolchain project](https://github.com/EIE2-IAC-Labs/Lab0-devtools/blob/main/autumn/workspace/toolchain) to test that your tools are functioning correctly. This folder is already downloaded and can be found in your VS Code workspace you just opened.
 
 ### Mac OS Monterey and Ubuntu 22.04
@@ -48,7 +48,7 @@ At the end of the lab you will have installed the following tools:
     You may have to enter your password a few times while everything installs.
 
     Depending on your Internet connection, this may take up to 15 minutes.
-3) VS Code should automatically open after the previous step. If not, open the *workspace* at `~/iac/Lab0-devtools/autumn/workspace/iac-autumn.code-workspace`; to do this open VS Code, and select "File->Open Workspace from File...", then navigate to the workspace file.
+3) VS Code should automatically open after the previous step. If not, open the *workspace* at `~/iac/lab0-devtools/autumn/workspace/iac-autumn.code-workspace`; to do this open VS Code, and select "File->Open Workspace from File...", then navigate to the workspace file.
 4) Follow the instructions in the [toolchain project](https://github.com/EIE2-IAC-Labs/Lab0-devtools/blob/main/autumn/workspace/toolchain) to test that your tools are functioning correctly. This folder is already downloaded and can be found in your VS Code workspace you just opened.
 
 ## Behind the scenes
@@ -59,7 +59,9 @@ The `install.sh` script installs a few common dependencies before detecting what
 
 ## Something didn't work
 
-If something didn't work, create a new issue in this Github repository.
+The most common issue is that the install script may hang while installing extensions on WSL. If this happens, skip to the next step and VS Code should automatically ask you to install the recommended extensions when you open the workspace.
+
+For anything else, check through the closed Github issues or create a new issue in this Github repository.
 
 Make sure to include the full terminal log, along with screenshots and extra
 context about which step you were trying to perform.
