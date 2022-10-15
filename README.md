@@ -17,7 +17,7 @@ At the end of the lab you will have installed the following tools:
 ### Windows 10 and 11
 
 1) Make sure your version of Windows is up-to-date. You must be running Windows 10 (Build 19041 and higher) or Windows 11.
-2) Install [VS Code](https://code.visualstudio.com/Download)
+2) Install [VS Code](https://code.visualstudio.com/Download). Once VS Code is installed, go [here](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) and install the Remote Development extension.
 3) Open Command Prompt as *Administrator* and enter `wsl --install` to enable Windows Subsystem for Linux (WSL). You will need to restart your machine after doing this.
 4) In Command Prompt, run `wsl --set-default-version 1` to use WSL version 1 instead of version 2. For this coursework, WSL 1 is required as WSL 2 does not support USB device access.
 5) Download Ubuntu 22.04 from the [Microsoft Store](https://www.microsoft.com/store/productId/9PN20MSR04DW). If you already have this downloaded, run `wsl --set-version Ubuntu-22.04 1` to make sure this runs under WSL 1.
@@ -39,7 +39,7 @@ At the end of the lab you will have installed the following tools:
    code ~/Documents/iac/lab0-devtools/autumn/workspace/iac-autumn.code-workspace
    ```
 
-11) Follow the instructions in the [toolchain project](https://github.com/EIE2-IAC-Labs/Lab0-devtools/blob/main/autumn/workspace/toolchain) to test that your tools are functioning correctly. This folder is already downloaded and can be found in your VS Code workspace you just opened.
+10) Follow the instructions in the [toolchain project](https://github.com/EIE2-IAC-Labs/Lab0-devtools/blob/main/autumn/workspace/toolchain) to test that your tools are functioning correctly. This folder is already downloaded and can be found in your VS Code workspace you just opened.
 
 ### Mac OS Monterey and Ubuntu 22.04
 
