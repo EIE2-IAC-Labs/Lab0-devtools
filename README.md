@@ -64,7 +64,13 @@ The `install.sh` script installs a few common dependencies before detecting what
 
 ## Something didn't work
 
-The most common issue is that the install script may hang while installing extensions on WSL. If this happens, skip to the next step and VS Code should automatically ask you to install the recommended extensions when you open the workspace.
+The most common issue is that the install script may hang while installing extensions on WSL. If this happens and you are on Windows, make sure the [WSL extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) installed in VS Code. After you've checked this, skip to the next step and VS Code should automatically ask you to install the recommended extensions when you open the workspace. This is the last step in the installation script, so everything else should work fine after performing this workaround.
+
+The second most common issue for Windows users is that they are not opening the workspace under WSL, rather they are opening it under Windows. First check that you have the [WSL extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) installed, then open an Ubuntu 22.04 terminal and run the `code` command to open VS Code under WSL.
+
+If VS Code is running under WSL, you should see `[WSL: Ubuntu-22.04]` in the window title (Apple users can ignore this):
+
+![image](https://user-images.githubusercontent.com/1413854/196061022-afe07888-2956-4c38-8702-e99b246be5cb.png)
 
 For anything else, check through the closed Github issues or create a new issue in this Github repository.
 
