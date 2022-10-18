@@ -47,6 +47,9 @@ sudo tar -xzf riscv-gnu-toolchain.tar.gz --directory /opt
 export PATH="/opt/riscv/bin:$PATH"
 # shellcheck disable=SC2016
 printf '\n%s' 'export PATH="/opt/riscv/bin:$PATH"' >> ~/.zprofile
+if [[ -f ~/.bash_profile ]]; then
+    printf '\n%s' 'export PATH="/opt/riscv/bin:$PATH"' >> ~/.bash_profile
+fi
 rm -rf riscv-gnu-toolchain.tar.gz
 
 echo "riscv-gnu-toolchain installed..."
