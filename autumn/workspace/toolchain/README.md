@@ -2,7 +2,17 @@
 
 ## Checking your tools are setup correctly
 
-To see if you can run all of the required tools correctly, open up a terminal to this folder and run the following:
+To see if you can run all of the required tools correctly, open the workspace in VS Code (the same way as during installation of the lab). 
+
+> If you're on Windows, you need to load the workspace with WSL Ubuntu 22.04. In this case, the VS Code window should be titled as follows:
+>
+> ![image](https://user-images.githubusercontent.com/1413854/196061022-afe07888-2956-4c38-8702-e99b246be5cb.png)
+>
+> If it does not contain the WSL tag, you can use the button ![image](https://user-images.githubusercontent.com/1413854/196477312-9149e66e-3e31-4a98-bf19-f649bff29083.png) at the bottom left of VS Code to create a new WSL window by pressing it, then choosing `New WSL Window using Distro...` with `Ubuntu-22.04`
+
+
+
+Run the following commands in the VS Code terminal and check that the output matches the below.
 
 ```bash
 iac@host:~/Documents/iac/lab0-devtools/autumn/workspace/toolchain$ make tb_verilator
@@ -23,7 +33,7 @@ Testbench exiting after reaching MAX_TICKS
 ```bash
 iac@host:~/Documents/iac/lab0-devtools/autumn/workspace/toolchain$ make tb_toolchain
 ==== Building Toolchain test =====
-obj_dir/tb_toolchain: ELF 32-bit LSB executable, UCB RISC-V, single-float ABI, version 1 (SYSV), statically linked, not stripped
+obj_dir/tb_toolchain: ELF 32-bit LSB executable, UCB RISC-V, soft-float ABI, version 1 (SYSV), statically linked, not stripped
 ```
 
 If you see the same outputs, your Verilator and riscv-gnu-toolchain are setup correctly!
