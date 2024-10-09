@@ -16,6 +16,9 @@ Run the following commands in the VS Code terminal and check that the output mat
 
 ```bash
 iac@host:~/Documents/iac/lab0-devtools/autumn/workspace/toolchain$ make tb_verilator
+```
+Output as follows:
+```plaintext
 ==== Building Verilator test =====
 position        tick    value_i value_o
 (during tick)   1       42      0
@@ -32,6 +35,9 @@ Testbench exiting after reaching MAX_TICKS
 
 ```bash
 iac@host:~/Documents/iac/lab0-devtools/autumn/workspace/toolchain$ make tb_toolchain
+```
+Output as follows:
+```plaintext
 ==== Building Toolchain test =====
 obj_dir/tb_toolchain: ELF 32-bit LSB executable, UCB RISC-V, soft-float ABI, version 1 (SYSV), statically linked, not stripped
 ```
