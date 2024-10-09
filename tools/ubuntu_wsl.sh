@@ -26,4 +26,4 @@ echo "Running additional script from ${SCRIPT_DIR}"
 "${SCRIPT_DIR}/ubuntu.sh"
 
 echo "Installing usbipd library on Windows. This may require administrator access."
-powershell.exe /c winget install usbipd
+powershell.exe /c "winget install usbipd" || true
