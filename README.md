@@ -2,7 +2,7 @@
 
 Welcome to Lab 0 of Autumn Term [Instruction Architectures and Compilers](http://intranet.ee.ic.ac.uk/electricalengineering/eecourses_t4/course_content.asp?c=ELEC50010&s=I2) (IAC).
 
-In this lab, you will install the tools needed for both the labs and coursework. The labs for this term can be run on both macOS and Windows. Native Linux is not yet supported.
+In this lab, you will install the tools needed for both the labs and coursework. The labs for this term can be run on both macOS and Windows. Native Linux is not supported.
 
 At the end of the lab you will have installed the following tools:
 
