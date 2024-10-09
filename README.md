@@ -2,7 +2,7 @@
 
 Welcome to Lab 0 of Autumn Term [Instruction Architectures and Compilers](http://intranet.ee.ic.ac.uk/electricalengineering/eecourses_t4/course_content.asp?c=ELEC50010&s=I2) (IAC).
 
-In this lab, you will install the tools needed for both the labs and coursework. The labs for this term can be run on both MacOS and Windows. Native Linux is not yet supported.
+In this lab, you will install the tools needed for both the labs and coursework. The labs for this term can be run on both macOS and Windows. Native Linux is not yet supported.
 
 At the end of the lab you will have installed the following tools:
 
@@ -40,10 +40,11 @@ At the end of the lab you will have installed the following tools:
 
 9) Follow the instructions in the [toolchain project](https://github.com/EIE2-IAC-Labs/Lab0-devtools/blob/main/autumn/workspace/toolchain) to test that your tools are functioning correctly. This folder is already downloaded and can be found in your VS Code workspace you just opened.
 
-### MacOS (Monterey or later)
+### macOS
 
-1) Install [VS Code](https://code.visualstudio.com/Download)
-2) Open a terminal and enter
+1) Make sure that your version of macOS is up-to-date. You must be running macOS Monterey or higher.
+2) Install [VS Code](https://code.visualstudio.com/Download)
+3) Open a terminal and enter
 
     ```bash
     bash <(curl -fsSL https://raw.githubusercontent.com/EIE2-IAC-Labs/Lab0-devtools/main/tools/install.sh)
@@ -52,8 +53,8 @@ At the end of the lab you will have installed the following tools:
     You may have to enter your password a few times while everything installs.
 
     Depending on your Internet connection, this may take up to 15 minutes.
-3) VS Code should automatically open after the previous step. If not, open the *workspace* at `~/Documents/iac/lab0-devtools/autumn/workspace/iac-autumn.code-workspace`; to do this open VS Code, and select "File->Open Workspace from File...", then navigate to the workspace file.
-4) Follow the instructions in the [toolchain project](https://github.com/EIE2-IAC-Labs/Lab0-devtools/blob/main/autumn/workspace/toolchain) to test that your tools are functioning correctly. This folder is already downloaded and can be found in your VS Code workspace you just opened.
+4) VS Code should automatically open after the previous step. If not, open the *workspace* at `~/Documents/iac/lab0-devtools/autumn/workspace/iac-autumn.code-workspace`; to do this open VS Code, and select "File->Open Workspace from File...", then navigate to the workspace file.
+5) Follow the instructions in the [toolchain project](https://github.com/EIE2-IAC-Labs/Lab0-devtools/blob/main/autumn/workspace/toolchain) to test that your tools are functioning correctly. This folder is already downloaded and can be found in your VS Code workspace you just opened.
 
 ## Behind the scenes
 
