@@ -2,7 +2,7 @@
 
 Welcome to Lab 0 of Autumn Term [Instruction Architectures and Compilers](http://intranet.ee.ic.ac.uk/electricalengineering/eecourses_t4/course_content.asp?c=ELEC50010&s=I2) (IAC).
 
-In this lab, you will install the tools needed for both the labs and coursework.
+In this lab, you will install the tools needed for both the labs and coursework. The labs for this term can be run on both MacOS and Windows. Native Linux is not yet supported.
 
 At the end of the lab you will have installed the following tools:
 
@@ -40,7 +40,7 @@ At the end of the lab you will have installed the following tools:
 
 9) Follow the instructions in the [toolchain project](https://github.com/EIE2-IAC-Labs/Lab0-devtools/blob/main/autumn/workspace/toolchain) to test that your tools are functioning correctly. This folder is already downloaded and can be found in your VS Code workspace you just opened.
 
-### Mac OS Monterey and Ubuntu 22.04
+### MacOS (Monterey or later)
 
 1) Install [VS Code](https://code.visualstudio.com/Download)
 2) Open a terminal and enter
