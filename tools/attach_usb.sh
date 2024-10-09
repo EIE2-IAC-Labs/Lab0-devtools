@@ -21,7 +21,7 @@ BUS_ID=$(echo "$USB_INFO" | grep "$VBUDDY_REGEX" | awk '{print $1}')
 # Share USB device with WSL if not already shared
 if echo "$USB_INFO" | grep -q "$VBUDDY_REGEX .* Not shared"; then
     echo "Sharing Vbuddy USB port with WSL. This may require administrator access."
-    powershell.exe -Command "Start-Process 'usbipd.exe' -Verb runAs -ArgumentList 'bind --busid $BUS_ID'"
+    powershell.exe /c "Start-Process 'usbipd.exe' -Verb runAs -ArgumentList 'bind --busid $BUS_ID'"
 fi
 
 # Attach USB device to WSL
