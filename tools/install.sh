@@ -82,12 +82,12 @@ else
     echo "Folder already exists at ${IAC_FOLDER}"
 fi
 
-if [ ! -d "$TOOLS_FOLDER" ] 
+if [ ! -d "$TOOLS_FOLDER" ]
 then
     echo "Cloning the iac Lab0-devtools repository"
     cd "$IAC_FOLDER"
     git clone --recurse-submodules https://github.com/EIE2-IAC-Labs/Lab0-devtools "$TOOLS_FOLDER" &>/dev/null
-else 
+else
     echo "Updating the iac Lab0-devtools repository"
     cd "$TOOLS_FOLDER"
     git status
@@ -112,6 +112,7 @@ else
     echo "Installing extensions..."
     # shellcheck disable=SC2002
     cat "${TOOLS_FOLDER}/autumn/workspace/iac-autumn.code-workspace" | jq -r '.extensions.recommendations | .[]' | xargs -L1 code --install-extension
+    mkdir "${TOOLS_FOLDER}/autumn/workspace/labs" "${TOOLS_FOLDER}/autumn/workspace/cpu"
     code "${TOOLS_FOLDER}/autumn/workspace/iac-autumn.code-workspace"
 fi
 
