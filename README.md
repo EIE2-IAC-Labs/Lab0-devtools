@@ -19,27 +19,26 @@ At the end of the lab you will have installed the following tools:
 1) Make sure your version of Windows is up-to-date. You must be running Windows 10 (Build 19041 and higher) or Windows 11.
 2) Install [VS Code](https://code.visualstudio.com/Download). Once VS Code is installed, go [here](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) and install the Remote Development extension.
 3) Open Command Prompt as *Administrator* and enter `wsl --install` to enable Windows Subsystem for Linux (WSL). You will need to restart your machine after doing this.
-4) In Command Prompt, run `wsl --set-default-version 1` to use WSL version 1 instead of version 2. For this coursework, WSL 1 is required as WSL 2 does not support USB device access.
-5) Download Ubuntu 22.04 from the [Microsoft Store](https://www.microsoft.com/store/productId/9PN20MSR04DW). If you already have this downloaded, run `wsl --set-version Ubuntu-22.04 1` to make sure this runs under WSL 1.
-6) Download [Windows Terminal](https://aka.ms/terminal) for an improved terminal experience
-7) Open Windows Terminal and make a new Ubuntu 22.04 terminal
+4) Download Ubuntu 22.04 from the [Microsoft Store](https://www.microsoft.com/store/productId/9PN20MSR04DW).
+5) Download [Windows Terminal](https://aka.ms/terminal) for an improved terminal experience
+6) Open Windows Terminal and make a new Ubuntu 22.04 terminal
    ![Opening a new Windows Terminal tab for Ubuntu](./images/wsl_install.png)
-8) Inside the Ubuntu terminal, enter
+7) Inside the Ubuntu terminal, enter
 
     ```bash
     bash <(curl -fsSL https://raw.githubusercontent.com/EIE2-IAC-Labs/Lab0-devtools/main/tools/install.sh)
     ```
 
-    You may have to enter your password a few times while everything installs.
+    You may have to enter your password a few times while everything installs. Windows may also ask for administrator access.
 
     Depending on your Internet connection, this may take up to 15 minutes.
-9) VS Code should automatically open after the previous step. If not, open the *workspace* at `~/Documents/iac/lab0-devtools/autumn/workspace/iac-autumn.code-workspace`. To do this, open an Ubuntu 22.04 terminal and type `code`; doing this opens a [VS Code instance inside Ubuntu](https://code.visualstudio.com/docs/remote/wsl#_getting-started) rather than Windows. When VS Code opens, select "File->Open Workspace from File...", then navigate to the workspace file. You can also do this by typing the following command in an Ubuntu 22.04 terminal:
-   
+8) VS Code should automatically open after the previous step. If not, open the *workspace* at `~/Documents/iac/lab0-devtools/autumn/workspace/iac-autumn.code-workspace`. To do this, open an Ubuntu 22.04 terminal and type `code`; doing this opens a [VS Code instance inside Ubuntu](https://code.visualstudio.com/docs/remote/wsl#_getting-started) rather than Windows. When VS Code opens, select "File->Open Workspace from File...", then navigate to the workspace file. You can also do this by typing the following command in an Ubuntu 22.04 terminal:
+
    ```bash
    code ~/Documents/iac/lab0-devtools/autumn/workspace/iac-autumn.code-workspace
    ```
 
-10) Follow the instructions in the [toolchain project](https://github.com/EIE2-IAC-Labs/Lab0-devtools/blob/main/autumn/workspace/toolchain) to test that your tools are functioning correctly. This folder is already downloaded and can be found in your VS Code workspace you just opened.
+9) Follow the instructions in the [toolchain project](https://github.com/EIE2-IAC-Labs/Lab0-devtools/blob/main/autumn/workspace/toolchain) to test that your tools are functioning correctly. This folder is already downloaded and can be found in your VS Code workspace you just opened.
 
 ### Mac OS Monterey and Ubuntu 22.04
 
@@ -60,7 +59,7 @@ At the end of the lab you will have installed the following tools:
 
 The `bash <(curl -fsSL https://raw.githubusercontent.com/EIE2-IAC-Labs/Lab0-devtools/main/tools/install.sh)` first runs `curl`, which downloads the [install script](./tools/install.sh) from GitHub. The contents of this file are then redirected to the `bash` shell to be executed.
 
-The `install.sh` script installs a few common dependencies before detecting what Operating System you are running on. It then runs one of the OS specific scripts in the same folder. These  compile Verilator from source, as well as install the riscv-gnu-toolchain from pre-compiled binaries.
+The `install.sh` script installs a few common dependencies before detecting what Operating System you are running on. It then runs one of the OS specific scripts in the same folder. These  compile Verilator from source, as well as install the riscv-gnu-toolchain from pre-compiled binaries. The Windows-specific script installs the usbipd library on Windows for connecting USB devices to WSL.
 
 ## Something didn't work
 
