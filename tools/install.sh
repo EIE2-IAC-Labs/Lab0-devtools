@@ -118,5 +118,5 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     "${TOOLS_FOLDER}/tools/extensions.sh"
     echo "IAC Lab0-devtools Installation complete..."
 else
-    echo "Successfully installed tools and dependencies. Run ${TOOLS_FOLDER}/tools/extenions.sh in the VS Code terminal to complete installation."
+    echo "Successfully installed tools and dependencies. Run ${TOOLS_FOLDER}/tools/extensions.sh in the VS Code terminal to complete installation."
 fi
