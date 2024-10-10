@@ -93,6 +93,7 @@ else
     git status
     git pull --ff-only
 fi
+mkdir -p "${TOOLS_FOLDER}/autumn/workspace/labs" "${TOOLS_FOLDER}/autumn/workspace/cpu"
 
 echo "Installing dependencies"
 if [ -z "$LOCAL_DEV" ]; then
@@ -104,16 +105,18 @@ else
     "$POST_RUN_SCRIPT"
 fi
 
-echo "Make sure VS Code is installed then run the following. Make sure to mark the workspace as trusted and install the recommended extensions when prompted"
+echo "Make sure VS Code is installed then run the following to open the workspace. Make sure to mark the workspace as trusted."
 printf "\n================\n%s\n================\n\n" "code ${TOOLS_FOLDER}/autumn/workspace/iac-autumn.code-workspace"
 if ! which code &>/dev/null; then
-    echo "VS Code does not appear to be installed..."
+    echo "Error: VS Code does not appear to be installed..."
+    exit 1
 else
-    echo "Installing extensions..."
-    # shellcheck disable=SC2002
-    cat "${TOOLS_FOLDER}/autumn/workspace/iac-autumn.code-workspace" | jq -r '.extensions.recommendations | .[]' | xargs -L1 code --install-extension
-    mkdir "${TOOLS_FOLDER}/autumn/workspace/labs" "${TOOLS_FOLDER}/autumn/workspace/cpu"
     code "${TOOLS_FOLDER}/autumn/workspace/iac-autumn.code-workspace"
 fi
 
-echo "IAC Lab0-devtools Installation complete..."
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    "${TOOLS_FOLDER}/tools/extensions.sh"
+    echo "IAC Lab0-devtools Installation complete..."
+else
+    echo "Successfully installed tools and dependencies. Run ${TOOLS_FOLDER}/tools/extensions.sh in the VS Code terminal to complete installation."
+fi

@@ -38,7 +38,13 @@ At the end of the lab you will have installed the following tools:
    code ~/Documents/iac/lab0-devtools/autumn/workspace/iac-autumn.code-workspace
    ```
 
-9) Follow the instructions in the [toolchain project](https://github.com/EIE2-IAC-Labs/Lab0-devtools/blob/main/autumn/workspace/toolchain) to test that your tools are functioning correctly. This folder is already downloaded and can be found in your VS Code workspace you just opened.
+9) Open a terminal inside the VS Code workspace (`Ctrl`+`J`). Enter the following command into the terminal to install the required extensions:
+
+    ```bash
+    ~/Documents/iac/lab0-devtools/tools/extensions.sh
+    ```
+
+10) Follow the instructions in the [toolchain project](https://github.com/EIE2-IAC-Labs/Lab0-devtools/blob/main/autumn/workspace/toolchain) to test that your tools are functioning correctly. This folder is already downloaded and can be found in your VS Code workspace you just opened.
 
 ### macOS
 
