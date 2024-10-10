@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 # Author : James Nock
-# Year   : 2022
+# Contributor(s) : Hrishikesh Venkatesh
+# Year   : 2024
 
 set -euo pipefail
 
@@ -20,9 +21,9 @@ brew install verilator
 echo "Installing gtkwave"
 brew install --cask gtkwave
 
-echo "Installing python..."
-brew install python
-python3 -m ensurepip
+echo "Installing python... (ignoring any errors)"
+brew install python || true
+python3 -m ensurepip || true
 
 echo "Installing additional deps..."
 brew install make cmake \
@@ -48,7 +49,7 @@ export PATH="/opt/riscv/bin:$PATH"
 # shellcheck disable=SC2016
 printf '\n%s' 'export PATH="/opt/riscv/bin:$PATH"' >> ~/.zprofile
 if [[ -f ~/.bash_profile ]]; then
-    printf '\n%s' 'export PATH="/opt/riscv/bin:$PATH"' >> ~/.bash_profile
+    printf '\n%s' 'export PATH="/opt/riscv/bin/$PATH"' >> ~/.bash_profile
 fi
 rm -rf riscv-gnu-toolchain.tar.gz
 
