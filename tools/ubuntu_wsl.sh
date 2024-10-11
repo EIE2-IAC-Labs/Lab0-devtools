@@ -25,5 +25,8 @@ echo "Running additional script from ${SCRIPT_DIR}"
 
 "${SCRIPT_DIR}/ubuntu.sh"
 
+# Fix GTKwave warnings in WSL
+echo -e '\nexport $(dbus-launch)' >> ~/.bashrc
+
 echo "Installing usbipd library on Windows. This may require administrator access."
 powershell.exe /c "winget install usbipd" || true
