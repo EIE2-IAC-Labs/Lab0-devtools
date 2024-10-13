@@ -12,7 +12,7 @@ To see if you can run all of the required tools correctly, open the workspace in
 
 
 
-Open the VS Code terminal (`Ctrl`+`J`), and make sure that you are in the directory below. You can check this by entering `pwd`, which prints your current working directory. Note that `~` represents your home directory, which should be `/home/<username>`.
+Open a VS Code terminal (`Ctrl`+`J`), and make sure that you are in the directory below. You can check this by entering `pwd`, which prints your current working directory. Note that `~` represents your home directory, which should be `/home/<username>`.
 
 ```
 ~/Documents/iac/lab0-devtools/autumn/workspace/toolchain
