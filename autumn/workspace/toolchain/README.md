@@ -18,7 +18,7 @@ Open a VS Code terminal (`Ctrl`+`J`), and make sure that you are in the director
 ~/Documents/iac/lab0-devtools/autumn/workspace/toolchain
 ```
 
-Run the following commands in the VS Code terminal and check that the output matches the below.
+Run the following commands in the VS Code terminal and check that their output matches that shown below.
 
 ```bash
 make tb_verilator
@@ -38,6 +38,8 @@ position        tick    value_i value_o
 (during tick)   5       46      44
 Testbench exiting after reaching MAX_TICKS
 ```
+
+---
 
 ```bash
 make tb_toolchain
