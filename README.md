@@ -18,10 +18,10 @@ At the end of the lab you will have installed the following tools:
 
 1) Make sure your version of Windows is up-to-date. You must be running Windows 10 (Build 19041 and higher) or Windows 11.
 2) Install [VS Code](https://code.visualstudio.com/Download). Once VS Code is installed, go [here](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) and install the Remote Development extension.
-3) Open Command Prompt as *Administrator* and enter `wsl --install` to enable Windows Subsystem for Linux (WSL). You will need to restart your machine after doing this.
-4) Download Ubuntu 22.04 from the [Microsoft Store](https://www.microsoft.com/store/productId/9PN20MSR04DW).
-5) Download [Windows Terminal](https://aka.ms/terminal) for an improved terminal experience
-6) Open Windows Terminal and make a new Ubuntu 22.04 terminal
+3) Open Command Prompt as *Administrator* and enter `wsl --install Ubuntu-22.04` to enable Windows Subsystem for Linux (WSL) with Ubuntu 22.04.
+4) Wait for the distribution to finish installing, then follow the prompts to setup a username and password.
+5) Download [Windows Terminal](https://aka.ms/terminal) for an improved terminal experience.
+6) Open Windows Terminal and make a new Ubuntu 22.04 terminal. The username on the left should be `<username>@<machine-name>`. If it is `root@<machine-name>`, something has gone wrong, and you should ask a teaching assistant for help.
    ![Opening a new Windows Terminal tab for Ubuntu](./images/wsl_install.png)
 7) Inside the Ubuntu terminal, enter
 
