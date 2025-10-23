@@ -19,7 +19,8 @@ echo "Installing Verilator"
 brew install verilator
 
 echo "Installing gtkwave"
-brew install --cask gtkwave
+brew tap randomplum/gtkwave
+brew install --build-from-source --HEAD randomplum/gtkwave/
 
 echo "Installing python... (ignoring any errors)"
 brew install python || true
